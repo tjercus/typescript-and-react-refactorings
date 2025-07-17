@@ -2,7 +2,8 @@
 
 ## BEFORE
 
-Using `null` directly in React state can introduce potential runtime errors and makes it harder to express the *absence* of a value in a functional and type-safe way.
+Using `null` directly in React state can introduce potential runtime errors and 
+makes it harder to express the *absence* of a value in a functional and type-safe way.
 
 ```tsx
 import React, { useState } from "react";
@@ -59,12 +60,17 @@ export const PersonSelector = () => {
 
 The refactor brings several improvements:
 
-    ✅ Type safety: useState<Person>(null) technically violates the type system because null is not a Person. Using Maybe<Person> fixes that.
+    ✅ Type safety: useState<Person>(null) technically violates the type system 
+    because null is not a Person. Using Maybe<Person> fixes that.
 
-    🧠 Explicitness: Maybe makes it obvious that a value might be missing, unlike null, which is often overlooked.
+    🧠 Explicitness: Maybe makes it obvious that a value might be missing, 
+    unlike null, which is often overlooked.
 
-    🛡 Safer rendering: Using map on a Maybe ensures the JSX is only rendered when a Person is present, avoiding null dereferencing.
+    🛡 Safer rendering: Using map on a Maybe ensures the JSX is only rendered when
+     a Person is present, avoiding null dereferencing.
 
-    🧪 Easier testing and logic composition: Maybe methods (map, chain, isNothing, etc.) make conditional logic more declarative and less error-prone.
+    🧪 Easier testing and logic composition: Maybe methods (map, chain, isNothing,
+     etc.) make conditional logic more declarative and less error-prone.
 
-Overall, using Maybe in state makes the component more robust and aligns better with functional programming principles.
+Overall, using Maybe in state makes the component more robust and aligns better 
+with functional programming principles.
