@@ -17,6 +17,7 @@ https://gitmcp.io/
 - if-then-else-nested.md
 - imperative-looping.md
 - large-function.md
+- effect-option-pipe.md
 
 ## React
 
